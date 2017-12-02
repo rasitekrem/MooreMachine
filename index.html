@@ -1,0 +1,59 @@
+<html>
+  <head>
+      <script src="js/moore.js">
+
+      </script>
+  </head>
+  <body>
+    <h1> Moore Machine</h1>
+    <h2>First Step</h2>
+    <form action="" method="post">
+        <label for="stateLenght">State Lenght: </label> <input  type="number" id="stateLenght" value="">
+        <label for="inputAlphabet">Input Alphabet: </label><input  type="text" id="inputAlphabet" value="">
+        <label for="outputAlphabet">Output Alphabet: </label><input  type="text" id="outputAlphabet" value=""><br>
+        <input type="button" id="addButton" value="Create"  onclick="create();">
+        <input type="button" id="clearAll" value="Clear All" onclick="location.reload(true);">
+    </form>
+    <div id="step-2" hidden="">
+        <h2>Second Step(Input State Value)</h2>
+        <form id="step2-form" action="" method="post">
+
+        </form>
+    </div>
+    <div id="step-3" hidden="">
+        <h2>Third Step(Create Transition Diagram)</h2>
+        <label> Old State : </label>
+        <select id="oldState">
+
+        </select>
+        <label>Input : </label>
+        <select id="inputValue">
+
+        </select>
+        <label> New State : </label>
+        <select id="newState">
+
+        </select>
+        <input type="button" value="Add" onclick="addTable();">
+    </div>
+    <div id="tableDiv" hidden="none">
+      <h2>Fourth Step(Table Confirm)</h2>
+        <table id="listTable" border="1">
+          <tr>
+            <th>Old State/Value</th>
+            <th>Input</th>
+            <th>New State/Value</th>
+          </tr>
+        </table>
+        <input type="button" value="Confirm" onclick="document.getElementById('step-4').style.display = 'block'">
+    </div>
+    <div id="step-4" hidden="">
+      <h2>Final Step(Search Word)</h2>
+      <input type="text" id="searchWord" value="">
+      <input type="button" name="" value="Search" onclick="searchTable();">
+      <div id="divList">
+
+      </div>
+    </div>
+  </body>
+</html>
